@@ -294,7 +294,7 @@ body {
   }
 }
 
-@media (min-height: 784px) {
+@media (min-height: 720px) {
   .footer-1 {
     position: absolute;
     width: 100%;
@@ -607,4 +607,105 @@ body {
     visibility: visible;
     opacity: 1;
   }
+}
+
+/*=============Video=============*/
+.video-section {
+  width: 100%;
+  height: auto;
+  position: absolute;
+}
+
+.video-modal {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  transition: 1s;
+}
+
+.video-popup {
+  width: 100%;
+  height: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.video-content {
+  position: absolute;
+  left: 0px;
+  top: -100vh;
+  height: auto;
+  min-height: 100vh;
+  width: 100%;
+  transition: top 1s ease;
+  z-index: 100;
+}
+
+.video-content::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+#video-checkbox {
+  position: absolute;
+  left: -10vw;
+  top: 40vh;
+}
+
+#video-checkbox:checked ~ header .video-content,
+.video-content[aria-expanded="true"] {
+  left: 0px;
+  top: 0px;
+  outline: none;
+  transition: 1s;
+}
+
+#video-checkbox:checked ~ header .video-section,
+.video-content[aria-expanded="true"] .video-section {
+  opacity: 1;
+  transition: 1s;
+  display: inherit;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+@media (min-height: 240px) {
+  .menu-star-img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    bottom: 0px;
+  }
+}
+
+@media (min-height: 720px) {
+  .menu-star-img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 110px;
+  }
+}
+
+.menu-close-img {
+  width: 200px;
+  height: auto;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  z-index: 110;
 }

@@ -4,6 +4,7 @@ import "../css/style.css"
 import us from "../images/usa.png"
 import fb from "../images/fb.png"
 import ins from "../images/ins.png"
+import star from "../images/starbutton.png"
 
 export default function Menu() {
   return (
@@ -42,6 +43,9 @@ export default function Menu() {
           </Link>
         </div>
       </div>
+      <Link to="/cotorreo">
+        <img className="menu-star-img" alt="" src={star} />
+      </Link>
     </section>
   )
 }
